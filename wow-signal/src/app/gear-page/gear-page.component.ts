@@ -12,6 +12,7 @@ export class GearPageComponent implements OnInit {
   WeatherData: any; 
   localTempK: any; 
   localTempF: any;
+  finalLocalTemp: any;
 
   constructor() { }
 
@@ -30,10 +31,13 @@ export class GearPageComponent implements OnInit {
     console.log(this.WeatherData);
     this.localTempK = this.WeatherData.main.temp;
     console.log(this.localTempK);
+    this.convertTempData();
+  }
 
+  convertTempData() {
     this.localTempF = (this.localTempK - 273.15) * (9/5) + 32;
-    console.log(this.localTempF);
-
+    this.finalLocalTemp = Math.trunc(this.localTempF);
+    console.log(this.finalLocalTemp);
   }
 
 }
