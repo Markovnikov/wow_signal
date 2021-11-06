@@ -8,10 +8,10 @@
   </div>
   
   <div class = "myBoxDiv">
-    <input type = "text" id="zipcode" style="background-color: #6DD47E; border: 1px solid black" value="12345">
+    <input type = "text" id="zipCode" style="background-color: #6DD47E; border: 1px solid black" value="12345" #zipCode>
     &nbsp; <br>
     <br>
-    <button type="button"> Submit</button>
+    <button type="button" (click)='getZipCode(zipCode.value)'> Submit</button>
     <p> Enter the zipcode of the hiking location to see the recommended gear</p>
   </div>
   

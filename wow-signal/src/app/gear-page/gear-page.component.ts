@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class GearPageComponent implements OnInit {
   apiURLp1 = 'http://api.openweathermap.org/data/2.5/weather?zip=';
   apiURLp2 = ',us&appid=7850af680b8391a67426235c8aeacc9d';
-  zipcode = 47904;
+  zipcode: any;
   WeatherData: any; 
   localTempK: any; 
   localTempF: any;
@@ -16,7 +16,14 @@ export class GearPageComponent implements OnInit {
 
   constructor() { }
 
+
+
   ngOnInit(): void {
+  }
+
+  getZipCode(zipCode: string) {
+    this.zipcode = zipCode;
+    console.log(this.zipcode);
     this.getTempData();
   }
 
