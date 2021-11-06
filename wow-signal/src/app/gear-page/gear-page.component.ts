@@ -38,11 +38,16 @@ export class GearPageComponent implements OnInit {
     console.log(this.WeatherData);
     this.localTempK = this.WeatherData.main.temp;
     console.log(this.localTempK);
-    this.convertTempData();
+    this.convertTempDataFahrenheit();
   }
 
-  convertTempData() {
+  convertTempDataFahrenheit() {
     this.localTempF = (this.localTempK - 273.15) * (9/5) + 32;
+    this.truncateTemperature();
+
+  }
+
+  truncateTemperature() {
     this.finalLocalTemp = Math.trunc(this.localTempF);
     console.log(this.finalLocalTemp);
   }

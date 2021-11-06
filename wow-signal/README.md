@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
 
+It is an angular app that displays hiking gear based on temperature input from the user as zipcode.
+It uses openWeatherAPI to get the temperature data.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
