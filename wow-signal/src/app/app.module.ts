@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { GearPageComponent } from './gear-page/gear-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GearPageComponent
   ],
   imports: [
     BrowserModule,
