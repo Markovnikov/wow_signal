@@ -49,6 +49,8 @@ export class GearPageComponent implements OnInit {
 
     if (this.finalLocalTemp <= 50) {
       this.coldTempPhotos();
+    } else if (this.finalLocalTemp >= 51 && this.finalLocalTemp <= 70) {
+      this.warmTempPhotos();
     }
   }
 
@@ -73,6 +75,32 @@ export class GearPageComponent implements OnInit {
         image: 'assets/img/snowboots.png',
         thumbImage: 'assets/img/snowboots.png',
         title: 'Snowboots'
+      }
+    ]
+  }
+
+
+  warmTempPhotos() {
+    this.imgCollection = [
+      {
+       image: 'assets/img/lightjacket.png',
+       thumbImage: 'assets/img/lightjacket.png',
+       title: 'A Light Jacket'
+      },
+      {
+        image: 'assets/img/knithat.png',
+        thumbImage: 'assets/img/knithat.png',
+        title: 'Cozy Knit Hat'
+      },
+      {
+        image: 'assets/img/boots.png',
+        thumbImage: 'assets/img/boots.png',
+        title: 'Standard Hiking Boots'
+      },
+      {
+        image: 'assets/img/backpack.png',
+        thumbImage: 'assets/img/backpack.png',
+        title: 'Backpack for supplies'
       }
     ]
   }
