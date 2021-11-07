@@ -13,6 +13,7 @@ export class GearPageComponent implements OnInit {
   localTempK: any; 
   localTempF: any;
   finalLocalTemp: any;
+  imgCollection: Array<object> = []; 
 
   constructor() { }
 
@@ -45,6 +46,35 @@ export class GearPageComponent implements OnInit {
     this.localTempF = (this.localTempK - 273.15) * (9/5) + 32;
     this.finalLocalTemp = Math.trunc(this.localTempF);
     console.log(this.finalLocalTemp);
+
+    if (this.finalLocalTemp <= 50) {
+      this.coldTempPhotos();
+    }
+  }
+
+  coldTempPhotos() {
+    this.imgCollection = [
+      {
+       image: 'assets/img/heavyjacket.png',
+       thumbImage: 'assets/img/heavyjacket.png',
+       title: 'A Heavy Warm Jacket'
+      },
+      {
+        image: 'assets/img/gloves.png',
+        thumbImage: 'assets/img/gloves.png',
+        title: 'Warm Winter Gloves'
+      },
+      {
+        image: 'assets/img/handwarmers.png',
+        thumbImage: 'assets/img/handwarmers.png',
+        title: 'Hand Warmers!'
+      },
+      {
+        image: 'assets/img/snowboots.png',
+        thumbImage: 'assets/img/snowboots.png',
+        title: 'Snowboots'
+      }
+    ]
   }
 
 
