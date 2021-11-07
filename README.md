@@ -1,2 +1,2 @@
 # wow_signal
-project for cs 361
+something fun

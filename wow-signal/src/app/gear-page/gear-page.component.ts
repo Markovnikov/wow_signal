@@ -51,6 +51,8 @@ export class GearPageComponent implements OnInit {
       this.coldTempPhotos();
     } else if (this.finalLocalTemp >= 51 && this.finalLocalTemp <= 70) {
       this.warmTempPhotos();
+    } else if (this.finalLocalTemp >= 71) {
+      this.hotTempPhotos();
     }
   }
 
@@ -80,6 +82,32 @@ export class GearPageComponent implements OnInit {
   }
 
 
+  hotTempPhotos() {
+    this.imgCollection = [
+      {
+       image: 'assets/img/shorts.png',
+       thumbImage: 'assets/img/shorts.png',
+       title: 'Comfy Shorts'
+      },
+      {
+        image: 'assets/img/cap.png',
+        thumbImage: 'assets/img/cap.png',
+        title: 'Cap to block the sun'
+      },
+      {
+        image: 'assets/img/sunscreen.png',
+        thumbImage: 'assets/img/sunscreen.png',
+        title: 'Sunscreen'
+      },
+      {
+        image: 'assets/img/waterbottle.png',
+        thumbImage: 'assets/img/waterbottle.png',
+        title: 'Water bottle'
+      }
+    ]
+  }
+
+
   warmTempPhotos() {
     this.imgCollection = [
       {
@@ -104,6 +132,5 @@ export class GearPageComponent implements OnInit {
       }
     ]
   }
-
 
 }
